@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Nav from './Nav';
+import MainNav from './MainNav';
 import TopNav from './TopNav';
 
 
@@ -19,7 +19,7 @@ export default function MainContent() {
       </Row>
       <Row>
         <Col>
-          <Nav/>
+          <MainNav/>
         </Col>
       </Row>
     </Container>
