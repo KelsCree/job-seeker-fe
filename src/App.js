@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import MainContent from './Components/MainContent';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import SignUpForm from './Components/CreateUser';
+import PrivateRoute from './Components/PrivateRoute'
 
 class App extends Component {
 
@@ -16,7 +17,7 @@ class App extends Component {
     }
 
     signUp = (user) => {
-      fetch('http://localhost:3000/users', {
+      return fetch('http://localhost:3000/users', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -37,8 +38,18 @@ class App extends Component {
     render() {
     return (
       <div className="App">
-        <SignUpForm signUp={this.signUp} alerts={this.state.alerts}/>
-        <MainContent/>
+        <Switch>
+          <Route exact path="/signup" render={(routerProps) => <SignUpForm {...routerProps} signUp={this.signUp} alerts={this.state.alerts}/>} />
+          <PrivateRoute
+            exact
+            path="/" 
+            component={MainContent}
+            applications={this.state.applications}
+            interviews={this.state.interviews}
+            reccomendations={this.state.reccomendations}
+            />
+            <Redirect to="/"/>
+        </Switch>
       </div>
     );
   }

@@ -7,7 +7,7 @@ import MainNav from './MainNav';
 import TopNav from './TopNav';
 
 
-export default function MainContent() {
+export default function MainContent(props) {
 
 
   return(
