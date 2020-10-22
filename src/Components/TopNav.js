@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from 'react-bootstrap/Navbar';
 
-export default function TopNav() {
+export default function TopNav({ user }) {
 
   return (
     <Navbar>
@@ -10,7 +10,8 @@ export default function TopNav() {
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
-          Signed in as: <a href="#login">Mark Otto</a>
+          {user.name ? <>Signed in as <a href="#profile">{user.name}</a> <a href="/login">Logout</a></> :
+          <>Log in to get started.</>  }
         </Navbar.Text>
       </Navbar.Collapse>
     </Navbar>

@@ -14,7 +14,6 @@ export default function MainContent(props) {
     <Container>
       <Row>
         <Col>
-          <TopNav/>
         </Col>
       </Row>
       <Row>

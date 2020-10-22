@@ -36,6 +36,7 @@ export default function SignUpForm({ signUp, alerts, history }) {
         <label>Password</label>
         <input type="password" name="password" value={password} onChange={handleChange}/>
         <input type="submit"/>
+        <p>Already a member?<button>Log In</button></p>
         {alerts ? showAlerts() : null}
       </form>
     </div>
