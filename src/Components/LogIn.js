@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 
-export default function LogIn({ login, alerts, history }) {
+export default function LogIn({ login, alerts, history, logout, user }) {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -11,7 +11,7 @@ export default function LogIn({ login, alerts, history }) {
   }
 
   useEffect(() => {
-    localStorage.removeItem('token')
+    logout()
   }, [])
   
   const handleSubmit = (event) => {
@@ -20,6 +20,7 @@ export default function LogIn({ login, alerts, history }) {
       email,
       password
     }
+
     login(user)
       .then(() => history.push('/'))
   }
@@ -29,9 +30,9 @@ export default function LogIn({ login, alerts, history }) {
   const showAlerts = () => alerts.map(alert => <p>{alert}</p>)
 
   return(
-    <div>
-      <h2>Log In</h2>
-      <form className='log-in-form' onSubmit={handleSubmit}>
+    <div id='form-container'>
+      <form id='log-in-form' onSubmit={handleSubmit}>
+        <h2>Log In</h2>
         <label>Email Address</label>
         <input name="email" value={email} onChange={handleChange}/>
         <label>Password</label>
@@ -40,7 +41,7 @@ export default function LogIn({ login, alerts, history }) {
         {alerts ? showAlerts() : null}
         <p>Not registered?</p>
         <button onClick={goToSignUp}>Create an Account</button>
-      </form>
+        </form>
     </div>
 
   )

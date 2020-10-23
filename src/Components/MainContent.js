@@ -5,23 +5,19 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MainNav from './MainNav';
 import TopNav from './TopNav';
-
+import PrivateRoute from './PrivateRoute'
+import { Route, Switch, Redirect, useRouteMatch, useParams,  } from 'react-router-dom'
+import Applications from './Applications'
+import Profile from './Profile'
+import Interviews from './Interviews'
 
 export default function MainContent(props) {
 
 
   return(
-    <Container>
-      <Row>
-        <Col>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <MainNav/>
-        </Col>
-      </Row>
-    </Container>
+   <>
+  </>
+
   )
 
 

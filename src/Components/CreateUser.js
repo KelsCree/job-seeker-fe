@@ -20,15 +20,15 @@ export default function SignUpForm({ signUp, alerts, history }) {
       password
     }
     signUp(user)
-      .then(() => history.push('/'))
+      .then(() => history.push('/home'))
   }
 
   const showAlerts = () => alerts.map(alert => <p>{alert}</p>)
 
   return(
     <div>
-      <h2>Create An Account</h2>
       <form className='sign-up-form' onSubmit={handleSubmit}>
+      <h2>Create An Account</h2>
         <label>Name</label>
         <input name="name" value={name} onChange={handleNameChange}/>
         <label>Email Address</label>
@@ -36,7 +36,8 @@ export default function SignUpForm({ signUp, alerts, history }) {
         <label>Password</label>
         <input type="password" name="password" value={password} onChange={handleChange}/>
         <input type="submit"/>
-        <p>Already a member?<button>Log In</button></p>
+        <p>Already a member?</p>
+        <button>Log In</button>
         {alerts ? showAlerts() : null}
       </form>
     </div>
