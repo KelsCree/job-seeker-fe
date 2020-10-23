@@ -10,8 +10,9 @@ export default function Profile({ user, reccomendations, submitLinkedin, submitR
       <h1 id='name'>{user.name}</h1>
       <UserInfoForm user={user} submitLinkedin={submitLinkedin} submitResume={submitResume}/>
     </div>
-    <h3 id='ref-title'>Your References</h3>
+    <h3 id='ref-title'>Your References:</h3>
     <Reccomendations reccomendations={reccomendations}/>
+    <button id='add-ref-button'>Add a Reference</button>
     </>
   )
 }

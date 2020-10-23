@@ -103,7 +103,12 @@ class App extends Component {
       console.log(application)
       const newApplications = this.state.applications.filter(newApplication => newApplication !== application)
       this.setState({ applications: newApplications })
-      fetch(`http://localhost:3000/applications/${application.id}`, {method: 'DELETE'})
+      fetch(`http://localhost:3000/applications/${application.id}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${localStorage.token}`
+        }
+      })
     }
     
     authorize_user = () => {

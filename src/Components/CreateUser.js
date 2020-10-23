@@ -29,15 +29,15 @@ export default function SignUpForm({ signUp, alerts, history }) {
     <div>
       <form className='sign-up-form' onSubmit={handleSubmit}>
       <h2>Create An Account</h2>
-        <label>Name</label>
+        <label>Name:</label>
         <input name="name" value={name} onChange={handleNameChange}/>
-        <label>Email Address</label>
+        <label>Email Address:</label>
         <input name="email" value={email} onChange={handleChange}/>
-        <label>Password</label>
+        <label>Password:</label>
         <input type="password" name="password" value={password} onChange={handleChange}/>
-        <input type="submit"/>
+        <input className='rec-button' type="submit"/>
         <p>Already a member?</p>
-        <button>Log In</button>
+        <button className='rec-button'>Log In</button>
         {alerts ? showAlerts() : null}
       </form>
     </div>

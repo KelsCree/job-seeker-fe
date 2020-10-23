@@ -52,15 +52,15 @@ class ApplicationForm extends React.Component {
     return(
       <>
       <form id="add-application-form" onSubmit={this.handleApplicationSubmit}>
-        <label>Position</label>
+        <label>Position:</label>
         <input type='text' value={this.state.position} onChange={this.handlePositionChange} name='position'  />
-        <label>Company</label>
+        <label>Company:</label>
         <input type='text' value={this.state.company} onChange={this.handleCompanyChange} name='company'  />
-        <label>URL</label>
+        <label>URL:</label>
         <input type='text' value={this.state.url} onChange={this.handleUrlChange} name='url'  />
-        <label>Status</label>
+        <label>Status:</label>
         <input type='text' value={this.state.status} onChange={this.handleStatusChange} name='status'  />
-        <label>Description</label>
+        <label>Description:</label>
         <input type='text' value={this.state.description} onChange={this.handleDescriptionChange} name='description'  />
         <input id='app-submit' type='submit'/>
       </form>

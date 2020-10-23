@@ -15,7 +15,7 @@ class Applications extends Component{
         <h5 className='job-title'>Position: {application.position}</h5>
         <h6>Company: {application.company}</h6>
         <p>Status: {application.status}</p>
-        <p>URL: {application.url}</p>
+        <p>URL: <a href={application.url}>{application.url}</a></p>
         <p>Description: {application.description}</p>
         <button>Edit</button>
         <button onClick={() => this.handleDelete(application)}>Delete</button>

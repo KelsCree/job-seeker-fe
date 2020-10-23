@@ -17,11 +17,11 @@ export default function Reccomendations(props){
         </Card.Header>
         <Accordion.Collapse eventKey={recid}>
           <Card.Body>
-            <p>{rec.email}</p>
-            <p>{rec.number}</p>
-            <p>{rec.relationship}</p>
-            <button>Delete</button>
-            <button>Edit</button>
+            <li>{rec.email}</li>
+            <li>{rec.number}</li>
+            <li>{rec.relationship}</li>
+            <button className='rec-button'>Delete</button>
+            <button className='rec-button'>Edit</button>
           </Card.Body>
         </Accordion.Collapse>
       </Card>

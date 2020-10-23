@@ -49,7 +49,7 @@ class UserInfoForm extends React.Component {
         <input className="submit-form" type='submit'/>
       </form>}
     </>
-  )
+    )
   }
 }
 
