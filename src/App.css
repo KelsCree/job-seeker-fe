@@ -1,9 +1,24 @@
 
+
+
+.App {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+
 #loggedoutapp {
   background-image: url("https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1078&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+}
+
+#loggedinapp {
+  background-color: #FFFFFC !important;
+  background-size: 100%;
+  height: 100vh;
+  /* background-repeat: repeat; */
+
 }
 
 #nav-bar-text {
@@ -46,4 +61,178 @@
 
 button {
   margin: 10px;
+  /* border-radius: 0 ;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0,0, 0.15);
+  border-radius: 8px; */
+}
+
+#nav-title {
+  font-size: 50px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+#nav-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#logout {
+  margin: 10px;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0,0, 0.15);
+  border-radius: 8px;
+  background-color: #5BC8AF;
+  color: #FFFFFC;
+}
+
+#logout:hover {
+  background-color: #EF767A;
+}
+
+#line {
+  margin: 10px;
+  height: 3px;
+  background: #EF767A;
+  border-style: none;
+  margin: 0 auto; width: 70%;
+}
+
+#name {
+  margin: 30px;
+}
+
+#ref-title {
+  margin: 30px;
+}
+
+#add-linkedin-form {
+  margin: 15px;
+  margin-left: 30px;
+}
+
+#add-resume-form {
+  margin: 15px;
+  margin-left: 30px;
+}
+
+#add-application-form > * {
+  margin-left: 30px;
+}
+
+#add-application-form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* margin: 15px;
+  margin-left: 30px; */
+  text-justify: center;
+}
+
+label {
+  margin: 10px;
+}
+
+.submit-form {
+  margin: 10px;
+  border-radius: 0 ;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0,0, 0.15);
+  border-radius: 8px;
+  background-color: #EF767A;
+  color: #FFFFFC;
+}
+
+.submit-form:hover {
+  background-color: #5BC8AF
+}
+
+.rec-card {
+  background-color: #717EC3 important!;
+}
+
+
+#app-title {
+  margin: 30px;
+}
+
+#app-container {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+#add-app-button {
+  margin: 10px;
+  margin-left: 30px;
+  border-radius: 0 ;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0,0, 0.15);
+  border-radius: 8px;
+  background-color: #EF767A;
+  color: #FFFFFC;
+  flex-grow: 0;
+  height: 35px;
+}
+
+#add-app-button:hover {
+  background: #5BC8AF;
+}
+
+.application-card {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 15px;
+  box-shadow: 4px 4px 4px 4px rgba(113, 126, 195, 0.15);
+}
+
+.application-card > button {
+  width: 100px;
+  background-color: #717EC3;
+  margin: 5px;
+  border-radius: 0 ;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0,0, 0.15);
+  border-radius: 8px;
+  color: #FFFFFC;
+  align-self: center;
+}
+
+.application-card > button:hover {
+  background-color: #DACC3E;
+}
+
+#app-submission-section {
+  display: flex;
+  justify-items: center;
+  align-content: center;
+}
+
+.job-title {
+  font-weight: bold;
+}
+
+#linkedin-link {
+  margin: 10px;
+  margin-left: 30px;
+}
+
+#resume-link {
+  margin: 10px;
+  margin-left: 30px;
+}
+
+#application-component {
+  background-color: #FFFFFC !important;
+}
+
+#app-submit {
+  margin: 10px;
+  background-color: #717EC3;
+  border-radius: 0 ;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0,0, 0.15);
+  border-radius: 8px;
+  color: #FFFFFC;
+}
+
+#app-submit:hover {
+  background-color: #DACC3E;
 }

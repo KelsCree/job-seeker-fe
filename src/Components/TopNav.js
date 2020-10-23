@@ -8,11 +8,11 @@ export default function TopNav({ user, logout }) {
 
   return (
     <Navbar>
-      <Navbar.Brand href="/home">SeekSmart</Navbar.Brand>
+      <Navbar.Brand id='nav-title' href="/home">SeekSmart <hr id='line'></hr> </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        <Navbar.Text >
-          {user.name ? <>Signed in as <Link to="/home/profile">{user.name}</Link> <button onClick={logout}>Logout</button></> :
+        <Navbar.Text id='nav-text'>
+          {user.name ? <>Signed in as <Link to="/home">{user.name}</Link> <button id='logout' onClick={logout}>Logout</button></> :
           <>Log in to get started.</>  }
         </Navbar.Text>
       </Navbar.Collapse>

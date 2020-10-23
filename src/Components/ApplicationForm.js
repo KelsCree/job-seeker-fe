@@ -62,7 +62,7 @@ class ApplicationForm extends React.Component {
         <input type='text' value={this.state.status} onChange={this.handleStatusChange} name='status'  />
         <label>Description</label>
         <input type='text' value={this.state.description} onChange={this.handleDescriptionChange} name='description'  />
-        <input type='submit'/>
+        <input id='app-submit' type='submit'/>
       </form>
 
     </>

@@ -9,8 +9,8 @@ export default function Reccomendations(props){
   const reclist = () => props.reccomendations.map(rec => {
     const recid = rec.id
     return (
-      <Card key={rec.id}>
-        <Card.Header>
+      <Card className='rec-card' key={rec.id}>
+        <Card.Header className='rec-header'>
           <Accordion.Toggle as={Button} variant="link" eventKey={recid}>
           {rec.name}
           </Accordion.Toggle>
@@ -20,6 +20,8 @@ export default function Reccomendations(props){
             <p>{rec.email}</p>
             <p>{rec.number}</p>
             <p>{rec.relationship}</p>
+            <button>Delete</button>
+            <button>Edit</button>
           </Card.Body>
         </Accordion.Collapse>
       </Card>

@@ -7,10 +7,10 @@ export default function Profile({ user, reccomendations, submitLinkedin, submitR
   return(
     <>
     <div id='user-card'>
-      <h2>{user.name}</h2>
+      <h1 id='name'>{user.name}</h1>
       <UserInfoForm user={user} submitLinkedin={submitLinkedin} submitResume={submitResume}/>
     </div>
-    <h3>Your References</h3>
+    <h3 id='ref-title'>Your References</h3>
     <Reccomendations reccomendations={reccomendations}/>
     </>
   )

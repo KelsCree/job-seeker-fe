@@ -29,22 +29,25 @@ class UserInfoForm extends React.Component {
     this.setState({ resume: event.target.value })
   }
 
+  linkedinLink = this.props.user.linkedin
+
+  resumeLink = this.props.user.resume
+
   render() {
 
     return(
       <>
-      <form id="add-linkedin-form" onSubmit={this.handleLinkedinSubmit}>
-        <label>Add Your Linkedin: </label>
+      {this.props.user.linkedin ? <p id='linkedin-link'>Linkedin: <a href={this.linkedinLink}>{this.props.user.linkedin}</a></p> : <form id="add-linkedin-form" onSubmit={this.handleLinkedinSubmit}>
+        <label>Add Your Linkedin:</label>
         <input type='text' value={this.state.linkedin} onChange={this.handleNewLinkedin} name='linkedin'  />
-        <input type='submit'/>
-      </form>
+        <input className="submit-form" type='submit'/>
+      </form>}
 
-      <form id="add-resume-form" onSubmit={this.handleResumeSubmit}>
-        <label>Add Your Resume Link: </label>
+      {this.props.user.resume ? <p id='resume-link'>Resume: <a href={this.resumeLink}>{this.props.user.resume}</a></p>: <form id="add-resume-form" onSubmit={this.handleResumeSubmit}>
+        <label>Add Your Resume:  </label>
         <input type='text' value={this.state.resume} onChange={this.handleNewResume} name='resume'  />
-        <input type='submit'/>
-      </form>
-
+        <input className="submit-form" type='submit'/>
+      </form>}
     </>
   )
   }
